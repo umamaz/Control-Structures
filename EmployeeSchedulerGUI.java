@@ -94,7 +94,7 @@ public class EmployeeSchedulerGUI extends JFrame {
     }
 
     // =====================================
-    // BUILD GUI
+    // BUILDING GUI
     // =====================================
 
     private void buildGUI() {
@@ -218,7 +218,7 @@ public class EmployeeSchedulerGUI extends JFrame {
     }
 
     // =====================================
-    // ADD EMPLOYEE
+    // ADDING EMPLOYEE
     // =====================================
 
     private void addEmployee() {
@@ -288,7 +288,7 @@ public class EmployeeSchedulerGUI extends JFrame {
                 employee.name + " added successfully.");
     }
     // =====================================
-// GENERATE SCHEDULE
+// GENERATING SCHEDULE
 // =====================================
 
 private void generateSchedule() {
@@ -324,7 +324,7 @@ private void generateSchedule() {
     Collections.shuffle(employees, random);
 
     // =====================================
-    // PASS 1: PREFERENCES (RANKED)
+    // PREFERENCES 
     // =====================================
 
     for (String day : DAYS) {
@@ -359,9 +359,7 @@ for (int rank = 0; rank < Math.min(3, prefs.size()); rank++) {
                 }
             }
 
-            // =====================================
-            // IF NOT ASSIGNED → USE CONFLICT RESOLUTION
-            // =====================================
+            
 
             if (!assigned) {
                 assignAlternativeShift(schedule, e, day);
@@ -369,9 +367,7 @@ for (int rank = 0; rank < Math.min(3, prefs.size()); rank++) {
         }
     }
 
-    // =====================================
-    // PASS 2: FILL SHORTAGES
-    // =====================================
+   
 
     fillStaffShortages(schedule);
 
@@ -382,9 +378,8 @@ for (int rank = 0; rank < Math.min(3, prefs.size()); rank++) {
             "Schedule generated successfully.");
 }
 
-// =====================================
-// CONFLICT RESOLUTION (REAL USAGE)
-// =====================================
+
+
 
 private boolean assignAlternativeShift(
         Map<String, Map<String, ArrayList<String>>> schedule,

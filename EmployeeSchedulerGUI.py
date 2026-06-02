@@ -110,7 +110,7 @@ class SchedulerGUI:
 
         random.shuffle(self.employees)
 
-        # ---------------- PASS 1 ----------------
+       
         for day in DAYS:
 
             day_employees = self.employees[:]
@@ -138,7 +138,6 @@ class SchedulerGUI:
                 if not assigned:
                     self.fallback(schedule, e, day)
 
-        # ---------------- PASS 2 ----------------
         self.fill_shortages(schedule)
 
         self.display(schedule)

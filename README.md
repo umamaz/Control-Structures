@@ -53,10 +53,10 @@ java EmployeeSchedulerGUI
 ### How to Run
 
 cd python-version
-python scheduler_gui.py
+python EmployeeSchedulerGUI.py
 
 or:
-python3 scheduler_gui.py
+python3 EmployeeSchedulerGUI.py
 
 ###  Requirements
 - Python 3.x
@@ -84,4 +84,5 @@ python3 scheduler_gui.py
 ---
 
 ## 👨‍💻 Author
-Scheduling system project (Java + Python)
+Scheduling system Assignment
+
